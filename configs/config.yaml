@@ -1,0 +1,20 @@
+# Single source of truth for the Indian food-delivery ETA project.
+
+paths:
+  raw_train: data/raw/synthetic_train.csv
+  raw_test: data/raw/testing_dataset.csv
+  train_features: data/processed/train_features.csv
+  test_features: data/processed/test_features.csv
+
+  best_model: models/artifacts/best_eta_model.joblib
+  feature_list: models/artifacts/feature_columns.json
+
+training:
+  sample_rows: null
+  test_size: 0.2
+  random_state: 42
+  target: Time_taken_min
+
+mlflow:
+  tracking_uri: sqlite:///mlflow.db
+  experiment_name: eta-prediction
